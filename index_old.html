@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>CPS</title>
+    <!-- <link rel="stylesheet" type="text/css" href="css/main.css"> -->
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css"> -->
+</head>
+
+<body>
+    <h1>筛选</h1>
+    <!-- <p id="test"></p> -->
+    <fieldset name="condition">
+        <div id="input-name">
+            <label for="name">ip:</label>
+            <input type="text" name="name">
+        </div>
+        <div id="input-score">
+            <label for="score">score:</label>
+            <div class="score-item" id="score-item1">
+                <select class="sco-op" id="input-sco-op1">
+                    <option name="score"> &lt </option>
+                    <option name="score"> &gt </option>
+                    <option name="score"> &lt = </option>
+                    <option name="score"> &gt = </option>
+                    <option name="score"> != </option>
+                    <option name="score"> == </option>
+                </select>
+                <input class="sco-num" id="input-sco-num1" type="text" name="age" placeholder="请输入0-100的数字">
+            </div>
+            <button class="btn btn-default" id="add_score_filter">添加条件</button>
+        </div>
+        <div id="input-age">
+            <label for="age">age:</label>
+            <div class="age-item" id="age-item1">
+                <select class="select-op" id="input-age-op1">
+                    <option name="score"> &lt </option>
+                    <option name="score"> &gt </option>
+                    <option name="score"> &lt = </option>
+                    <option name="score"> &gt = </option>
+                    <option name="score"> != </option>
+                    <option name="score"> == </option>
+                </select>
+                <input class="age-num" id="input-age-num1" type="" name="age" placeholder="请填入0-100的数字">
+            </div>
+            <button id="add_data_filter">添加条件</button>
+        </div>
+        <hr>
+        <div id="input-btns">
+            <button class="btn btn-primary" id="btn-commit">提交</button>
+            <button id="reload">重置</button>
+        </div>
+        <input  id="ip-addr" type="text" name="">
+        <button id="ip-btn">设置ip</button>
+    </fieldset>
+    <hr>
+    <fieldset id="fake_data">
+        <p>显示假数据</p>
+    </fieldset>
+    <hr>
+    <button type="button" class="btn btn-primary">（首选项）Primary</button>
+    <footer>
+        <p>by 可信云计算与大数据实验室</p>
+    </footer>
+</body>
+
+
+<script>
+require('./renderer2.js')
+require('./js/custom.js')
+require('./renderer.js')
+</script>
+<script type="text/javascript"></script>
+    <script type="text/javascript" src="http://g.alicdn.com/sj/lib/jquery/dist/jquery.min.js"></script>
+    
+    <script src="dist/js/bootstrap.min.js"></script>
+
+</html>
