@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>CPS-信息物理融合系统</title>
+    <!-- Bootstrap -->
+    <!-- <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script> -->
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script type="text/javascript" src="http://g.alicdn.com/sj/lib/jquery/dist/jquery.min.js"></script>
+</head>
+
+<body>
+    <nav class="header navbar navbar-inverse" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">CPS-信息物理融合系统</a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="active"><a href="#">发布</a></li>
+                <li><a href="#">订阅</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    管理员功能
+                    <b class="caret"></b>
+                </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">用户管理</a></li>
+                        <li><a href="#">添加用户</a></li>
+                        <li><a href="#">协同管理</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">个人信息管理</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span> 注册</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> 登录</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section class="banner">
+        <div class="img">
+            <img src="img/banner.jpg">
+        </div>
+        <div class="container login-panel">
+              <div class="panel panel-default">
+            <div class="panel-body">
+                <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <label for="firstname" class="col-sm-2 control-label">名字</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="firstname" placeholder="请输入名字">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastname" class="col-sm-2 control-label">姓</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="lastname" placeholder="请输入姓">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox">请记住我
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-primary">登录</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <nav class="navbar navbar-default navbar-fixed-bottom">
+        <div class="container">
+            <p class="text-center">@可信云计算与大数据实验室</p>
+        </div>
+    </nav>
+    <div class="data-view"></div>
+    <!-- <iframe width="960" height="500" src="demo.html"></iframe> -->
+</body>
+<script type="text/javascript" src="http://g.alicdn.com/sj/lib/jquery/dist/jquery.min.js"></script>
+<script src="dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/d3.min.js"></script>
+<script type="text/javascript">
+window.onload = function() {
+    d3.select(".img").append("h1")
+        .text("CPS")
+        .style("line-height", "100px")
+        .style("font-size", "50px")
+        .style('top', '15%')
+        .style("transform", "rotate(-180deg) scale(0.001, 0.001)")
+        .attr('class', 'banner-h1')
+        .transition()
+        .duration(1000)
+        .style("transform", null);
+    d3.select(".img").append("h2")
+        .text("用户登录")
+        .style("line-height", "100px")
+        .style("font-size", "50px")
+        .style('top', '28%')
+        .style("transform", "rotate(-180deg) scale(0.001, 0.001)")
+        .attr('class', 'banner-h1')
+        .transition()                                                 
+        .duration(2000)
+        .style("transform", null);
+}
+
+
+$("button").click(function() {
+    $(".data-view").empty();
+    var firstname = $("#firstname").val()
+    d3.select(".data-view").append("h1")
+        .text("Hello " + firstname + "!")
+        .style("text-align", "center")
+        .style("line-height", "100px")
+        .style("font-size", "50px")
+        .style("transform", "rotate(-180deg) scale(0.001, 0.001)")
+        .transition()
+        .duration(1500)
+        .style("transform", null);
+})
+</script>
+
+</html>

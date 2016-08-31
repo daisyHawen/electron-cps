@@ -1,0 +1,23 @@
+{
+  "ip": "192.168.1.61",
+  "target": [
+    {
+      "score": [
+        {
+          "data": 60,
+          "operation": ">"
+        },
+        {
+          "data": 80,
+          "operation": "<"
+        }
+      ],
+      "age": [
+        {
+          "data": 24,
+          "operation": "="
+        }
+      ]
+    }
+  ]
+}
