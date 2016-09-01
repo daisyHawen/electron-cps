@@ -1,12 +1,63 @@
  /*------------------------------------------*/
  /*echart 数据部分*/
  // 路径配置
+ // var developMode = false;
+ // if (developMode) {
+ //     window.esl = null;
+ //     window.define = null;
+ //     window.require = null;
+ //     (function() {
+ //         var script = document.createElement('script');
+ //         script.async = true;
+
+ //         script.src = '../../doc/asset/js/esl/esl.js';
+ //         if (script.readyState) {
+ //             script.onreadystatechange = fireLoad;
+ //         } else {
+ //             script.onload = fireLoad;
+ //         }
+ //         (document.getElementsByTagName('head')[0] || document.body).appendChild(script);
+
+ //         function fireLoad() {
+ //             script.onload = script.onreadystatechange = null;
+ //             setTimeout(loadedListener, 100);
+ //         }
+
+ //         function loadedListener() {
+ //             // for develop
+ //             require.config({
+ //                 packages: [{
+ //                     name: 'echarts',
+ //                     location: '../dist/src',
+ //                     // location: '../../src',
+ //                     main: 'echarts'
+ //                 }, {
+ //                     name: 'zrender',
+ //                     location: 'http://ecomfe.github.io/zrender/src',
+ //                     // location: '../../../zrender/src',
+ //                     main: 'zrender'
+ //                 }]
+ //             });
+ //             launchExample();
+ //         }
+ //     })();
+ // } else {
+ //     // for echarts online home page
+ //     require.config({
+ //         paths: {
+ //             echarts: '../dist/build/dist'
+ //         }
+ //     });
+ //     launchExample();
+ // }
+
  require.config({
      paths: {
-         echarts: 'http://echarts.baidu.com/build/dist'
+         // echarts: 'http://echarts.baidu.com/build/dist'
+         echarts: "../dist/build/dist"
+
      }
  });
-
  // 使用
  require(
      [
