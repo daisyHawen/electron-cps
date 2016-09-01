@@ -5,7 +5,7 @@
  require.config({
      paths: {
          // echarts: 'http://echarts.baidu.com/build/dist'
-         echarts: "../dist/build/dist"
+         echarts: "/dist/build/dist"
 
      }
  });
