@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>CPS-信息物理融合系统</title>
+    <!-- Bootstrap -->
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <script type="text/javascript" src="./dist/jquery-2.2.4.js"></script>
+    <script type="text/javascript" src="./dist/build/dist/echarts-all.js"></script>
+
+</head>
+
+<body>
+    <nav class="header navbar navbar-inverse" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="./index.html">CPS-信息物理融合系统</a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="active"><a href="">发布</a></li>
+                <li><a href="#">订阅</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    管理员功能
+                    <b class="caret"></b>
+                </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">用户管理</a></li>
+                        <li><a href="#">添加用户</a></li>
+                        <li><a href="#">协同管理</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">个人信息管理</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span> 张三</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> 退出登录</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section class="container">
+        <div class="banner">
+            <img src="">
+        </div>
+        <div class="description">数据订阅</div>
+        <div class="data-view">
+            <div id="totalData" style="width:100%;height:400px"></div>
+        </div>
+        <div class="limit">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="input-group">
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action <span class="caret"></span></button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                            </ul>
+                        </div>
+                        <!-- /btn-group -->
+                        <input type="text" class="form-control" aria-label="...">
+                    </div>
+                    <!-- /input-group -->
+                </div>
+                <!-- /.col-lg-6 -->
+                <div class="col-lg-6">
+                    <div class="input-group">
+                        <input type="text" class="form-control" aria-label="...">
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action <span class="caret"></span></button>
+                            <ul class="dropdown-menu dropdown-menu-right">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                            </ul>
+                        </div>
+                        <!-- /btn-group -->
+                    </div>
+                    <!-- /input-group -->
+                </div>
+                <!-- /.col-lg-6 -->
+            </div>
+            <!-- /.row -->
+        </div>
+    </section>
+    <nav class="navbar navbar-default navbar-fixed-bottom">
+        <div class="container">
+            <p class="text-center">@可信云计算与大数据实验室</p>
+        </div>
+    </nav>
+    <div class="data-view"></div>
+    <!-- <iframe width="960" height="500" src="demo.html"></iframe> -->
+</body>
+
+<script src="dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/d3.min.js"></script>
+<script type="text/javascript" src="js/suscribe.js" ></script>
+<script type="text/javascript">
+window.onload = function() {
+
+}
+</script>
+
+</html>
