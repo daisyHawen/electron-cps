@@ -10,9 +10,9 @@
     <!-- Bootstrap -->
     <link href="dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/subscribe.css">
     <script type="text/javascript" src="./dist/jquery-2.2.4.js"></script>
     <script type="text/javascript" src="./dist/build/dist/echarts-all.js"></script>
-
 </head>
 
 <body>
@@ -24,7 +24,6 @@
             <ul class="nav navbar-nav navbar-right">
                 <li class="active"><a href="">发布</a></li>
                 <li><a href="./data-view.html">数据展示</a></li>
-                
                 <li><a href="./subscribe.html">订阅</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -53,45 +52,27 @@
             <div id="totalData" style="width:100%;height:400px"></div>
         </div>
         <div class="limit">
-            <div class="row">
-                <div class="col-lg-6">
+            <div class="description">筛选条件：</div>
+            <ul class="list-group">
+                <li class="list-group-item">
                     <div class="input-group">
                         <div class="input-group-btn">
-                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action <span class="caret"></span></button>
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">纬度范围 <span class="caret"></span></button>
                             <ul class="dropdown-menu">
-                                <li><a href="#">Action</a></li>
+                                <li><a href="">Action</a></li>
                                 <li><a href="#">Another action</a></li>
                                 <li><a href="#">Something else here</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li><a href="#">Separated link</a></li>
                             </ul>
                         </div>
                         <!-- /btn-group -->
-                        <input type="text" class="form-control" aria-label="...">
-                    </div>
-                    <!-- /input-group -->
-                </div>
-                <!-- /.col-lg-6 -->
-                <div class="col-lg-6">
-                    <div class="input-group">
-                        <input type="text" class="form-control" aria-label="...">
-                        <div class="input-group-btn">
-                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action <span class="caret"></span></button>
-                            <ul class="dropdown-menu dropdown-menu-right">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something else here</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li><a href="#">Separated link</a></li>
-                            </ul>
+                        <input type="text" class="form-control" style="width:95%" aria-label="...">
+                        <div class="plus-minus">
+                            <a  onclick="addItem()"><span class="glyphicon glyphicon-plus"></span> </a>
+                            <a onclick="minusItem()"><span class="glyphicon glyphicon-minus"></span> </a>
                         </div>
-                        <!-- /btn-group -->
                     </div>
-                    <!-- /input-group -->
-                </div>
-                <!-- /.col-lg-6 -->
-            </div>
-            <!-- /.row -->
+                </li>
+            </ul>
         </div>
     </section>
     <nav class="navbar navbar-default navbar-fixed-bottom">
@@ -102,10 +83,10 @@
     <div class="data-view"></div>
     <!-- <iframe width="960" height="500" src="demo.html"></iframe> -->
 </body>
-
 <script src="dist/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/d3.min.js"></script>
-<script type="text/javascript" src="js/suscribe.js" ></script>
+<script type="text/javascript" src="js/suscribe.js"></script>
+<script type="text/javascript" src="js/plus-minus.js"></script>
 <script type="text/javascript">
 window.onload = function() {
 
